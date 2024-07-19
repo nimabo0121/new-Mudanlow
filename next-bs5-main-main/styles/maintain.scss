@@ -1,0 +1,366 @@
+body {
+  /* margin: 0;
+  padding: 0; */
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 2;
+  height: 100%;
+  overflow-x: hidden; /* 隱藏水平scroll條 */
+  /* overflow-y: auto; 自動顯示垂直scroll條（如果需要） */
+}
+
+/* 字體 */
+
+.lxgw-wenkai-mono-tc-light {
+  font-family: 'LXGW WenKai Mono TC', monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lxgw-wenkai-mono-tc-regular {
+  font-family: 'LXGW WenKai Mono TC', monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lxgw-wenkai-mono-tc-bold {
+  font-family: 'LXGW WenKai Mono TC', monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'LXGW WenKai Mono TC', monospace;
+  color: #000;
+}
+
+/* .english-text{
+  font-family: "Playfair Display", serif;
+  color: #000;
+} */
+
+p {
+  margin-bottom: 30px;
+}
+
+/* ul、li基本設置 */
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 8px 0;
+}
+
+/* a標籤基本設置 */
+a {
+  color: #71312c;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #e4e3e3;
+}
+
+section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+/* 按鈕設置 */
+.btn-color {
+  background-color: #eece6c;
+  color: #71312c;
+  font-size: 24px;
+}
+
+.frontpageLogo img,
+#scroll-down {
+  transition: transform 0.3s ease;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navItem .dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  z-index: 8;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.navItem .dropdownContent a {
+  color: #465952;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* 當hover時顯示下拉列表 */
+.navItem:hover .dropdownContent {
+  display: block;
+}
+
+/* 美化下拉列表 */
+.navItem .dropdownContent a:hover {
+  margin: 5px;
+  background-color: #465952;
+  color: #f8b62b;
+  border-radius: 10px;
+}
+
+/* ********首頁元件****** */
+/* 首頁畫面 */
+.frontpage {
+  height: 100vh;
+  position: relative;
+}
+
+.arrow {
+  z-index: 8;
+  position: fixed;
+  color: #fff;
+  top: 65%;
+  left: 49%;
+}
+/* 首頁logo */
+.frontpageLogo {
+  position: fixed;
+  z-index: 8;
+  top: 30%;
+  left: 30%;
+}
+.frontpageLogo > img {
+  height: 200px;
+}
+
+.frontpageImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  opacity: 0.5;
+  position: absolute;
+}
+
+/* 最新消息 */
+.news {
+  width: 900px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 2px gray;
+}
+
+.newsList {
+  transition: transform 0.3s ease;
+}
+
+.newsList:hover {
+  background-color: #fefefe;
+  transform: scale(1.05);
+  transition: 0.6s;
+}
+
+.list {
+  width: 100%;
+  margin: 0;
+}
+
+.frontPageImg {
+  object-fit: cover;
+  width: 100%;
+}
+
+.menuBtn {
+  position: absolute;
+  bottom: 50px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #eece6c;
+  font-family: 'LXGW WenKai Mono TC', monospace;
+}
+
+.menuBtn:hover {
+  background: #ffffff00;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.frontTitle {
+  padding-left: 200px;
+}
+
+.frontTitle2 {
+  text-align: center;
+}
+
+.background1 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.233),
+      rgba(255, 255, 255, 0.103)
+    ),
+    url('/pics/background1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* 避免背景重複 */
+}
+.background2 {
+  /* background-color: #e6e6e6; */
+  background-image: url('/pics/background2.png');
+  background-size: cover;
+}
+
+.cardCarousel {
+  --card-width: 80%;
+  --card-max-width: 800px;
+  --card-height: 400px;
+  --carousel-min-width: 600px;
+  z-index: 0;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter 0.3s ease;
+}
+
+@media screen and (max-width: 640px) {
+  .cardCarousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2);
+  }
+}
+
+.cardCarousel.smoothReturn {
+  transition: all 0.2s ease;
+}
+
+.cardCarousel .ImgCard {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 2em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.5);
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  filter: brightness(0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ImgCard.highlight {
+  filter: brightness(1);
+}
+
+.ImgCard:nth-of-type(1) {
+  background-image: url('/images/mudanlow-小圖檔/DSC00596.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.ImgCard:nth-of-type(2) {
+  background-image: url('/images/mudanlow-小圖檔/DSC00598.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.ImgCard:nth-of-type(3) {
+  background-image: url('/images/mudanlow-小圖檔/DSC00578.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.ImgCard:nth-of-type(4) {
+  background-image: url('/images/mudanlow-小圖檔/DSC00719.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.ImgCard:nth-of-type(5) {
+  background-image: url('/images/mudanlow-小圖檔/DSC00626.jpg');
+  background-size: cover;
+  background-position: center;
+}
+/* .card:nth-of-type(5) .image-container {
+  background-image: url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg");
+} */
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  border-radius: 1em;
+  padding: 1em;
+  /* -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3); */
+}
+
+.carouselBtn {
+  padding: 1px 8px;
+  border-radius: 0.5em;
+  position: absolute;
+  bottom: 50px;
+  left: auto;
+  font-size: 18px;
+}
+
+.aboutHire {
+  --widthHire: 100%;
+  position: relative;
+}
+
+.aboutHireImg {
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 2px 2px 2px gray;
+}
+.aboutHire > button {
+  border-radius: 0.5rem;
+  padding: 2px 8px;
+  position: absolute;
+  bottom: 10px;
+  left: calc(var(--widthHire) / 2);
+  transform: translate(-50%, -50%);
+}
+
+.news-arrow {
+  font-size: 10px;
+}
+
+.pic1 {
+  z-index: 1;
+  bottom: 0;
+  right: 50px;
+}

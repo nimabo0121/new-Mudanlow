@@ -1,0 +1,12 @@
+.chatbotButton {
+  position: sticky;
+  right: 20px;
+  bottom: 20px;
+  background: gray;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black;
+}
+.indexArea {
+  width: 100vw;
+  height: 25px;
+}

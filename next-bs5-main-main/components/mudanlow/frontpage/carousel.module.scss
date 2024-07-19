@@ -1,0 +1,102 @@
+.cardCarousel {
+  --card-width: 80%;
+  --card-max-width: 800px;
+  --card-height: 400px;
+  --carousel-min-width: 600px;
+  z-index: 0;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter 0.3s ease;
+}
+
+@media screen and (max-width: 640px) {
+  .cardCarousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2);
+  }
+}
+
+.cardCarousel.smoothReturn {
+  transition: all 0.2s ease;
+}
+
+.cardCarousel .card {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 2em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.5);
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  filter: brightness(0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.highlight {
+  filter: brightness(1);
+}
+
+.card:nth-of-type(1) {
+  background-image: url('/images/mudanlow-小圖檔/DSC00596.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.card:nth-of-type(2) {
+  background-image: url('/images/mudanlow-小圖檔/DSC00598.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.card:nth-of-type(3) {
+  background-image: url('/images/mudanlow-小圖檔/DSC00578.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.card:nth-of-type(4) {
+  background-image: url('/images/mudanlow-小圖檔/DSC00719.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.card:nth-of-type(5) {
+  background-image: url('/images/mudanlow-小圖檔/DSC00626.jpg');
+  background-size: cover;
+  background-position: center;
+}
+/* .card:nth-of-type(5) .image-container {
+  background-image: url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg");
+} */
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  border-radius: 1em;
+  padding: 1em;
+  /* -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3); */
+}
+
+.carouselBtn {
+  padding: 1px 8px;
+  border-radius: 0.5em;
+  position: absolute;
+  bottom: 50px;
+  left: auto;
+  font-size: 18px;
+}
